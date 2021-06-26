@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="css/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gym-css.css">
+    <style>
+        body{
+            background: -webkit-linear-gradient(left, #000000,#2d3436);
+        }
+        h3{
+            color: white;
+            text-align: center;
+            margin: 30px;
+        }
+        form{
+            text-align: center;
+        }
+    </style>
+</head>
+<title>Stripe Payment Demo</title> 
+<body>
+    <header>
+    <nav id="header-nav" class="navbar navbar-expand-lg bg-dark navbar-dark ">
+      <div >
+        <div class="navbar-header ">
+          <div id="logo" alt="logo image" class="d-xs-none d-sm-block"></div>
+        </div>
+      </div>
+        <div class="navbar-brand mr-auto">
+          <a href="gym-main"><h1>GOLD GYM</h1></a>
+        </div>
+      
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#target">
+        <span class="navbar-toggler-icon"></span>
+        
+      </button>
+
+      <div class="collapse navbar-collapse" id="target">    
+        <ul id="nav-list" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="gym-aboutus">About Us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="gym-equipments.html">Equipments</a>
+          </li>
+        
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Trainers</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#">Branches</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="gym-login">
+              <button class="button">Sign Up</button>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="gym-register">
+              <button class="button">Login</button>
+            </a>
+          </li> -->
+        </ul>
+      </div>  
+    </nav>
+  </header>
+
+
+    <h3>Welcome to Payment Gateway</h3> 
+    <form action="gym-payment" method="POST"> 
+    <script
+        src="https://checkout.stripe.com/v2/checkout.js"
+        
+        class="stripe-button"
+        data-key="pk_test_51IzjbhSFlsblk0CM36CWyPJyiST944BEPSSiUTKXAbjBvVQPcxQxtqQA1IxYCl0unRpe5dhNvw4cx6ynuuGYmdN300A4qrMSbJ" 
+        data-amount="200000" 
+        data-currency="INR" 
+        data-name="<%= name %>" 
+        data-description="Buy Online Gym Program" 
+        data-locale="auto" > 
+        </script> 
+    </form> 
+</body> 
+</html>
